@@ -55,7 +55,7 @@ Called the first time `prop` is accessed. Expected to return a value.
 ## Related
 
 - [lazy-value](https://github.com/sindresorhus/lazy-value) - Create a lazily evaluated value
-- [lazy-req](https://github.com/sindresorhus/lazy-req) - Require modules lazily
+- [import-lazy](https://github.com/sindresorhus/import-lazy) - Import a module lazily
 - [p-lazy](https://github.com/sindresorhus/p-lazy) - Create a lazy promise
 
 
