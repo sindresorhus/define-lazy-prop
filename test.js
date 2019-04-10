@@ -1,11 +1,11 @@
 import test from 'ava';
-import m from './';
+import defineLazyProp from '.';
 
-test(t => {
+test('main', t => {
 	const obj = {};
 	let i = 0;
 
-	m(obj, 'x', () => {
+	defineLazyProp(obj, 'x', () => {
 		i++;
 		return 'foo';
 	});
