@@ -1,6 +1,6 @@
 {
 	"name": "define-lazy-prop",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Define a lazily evaluated property on an object",
 	"license": "MIT",
 	"repository": "sindresorhus/define-lazy-prop",
