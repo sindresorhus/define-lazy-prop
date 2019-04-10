@@ -10,7 +10,7 @@ Define a [lazily evaluated](https://en.wikipedia.org/wiki/Lazy_evaluation) prope
 import defineLazyProp = require('define-lazy-prop');
 
 const unicorn = {
-	// ...
+	// …
 };
 
 defineLazyProp(unicorn, 'rainbow', () => expensiveComputation());

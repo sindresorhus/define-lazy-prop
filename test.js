@@ -2,19 +2,19 @@ import test from 'ava';
 import defineLazyProp from '.';
 
 test('main', t => {
-	const obj = {};
+	const object = {};
 	let i = 0;
 
-	defineLazyProp(obj, 'x', () => {
+	defineLazyProp(object, 'x', () => {
 		i++;
 		return 'foo';
 	});
 
-	t.is(obj.x, 'foo');
-	t.is(obj.x, 'foo');
+	t.is(object.x, 'foo');
+	t.is(object.x, 'foo');
 	t.is(i, 1);
 
-	obj.x = 'bar';
-	t.is(obj.x, 'bar');
+	object.x = 'bar';
+	t.is(object.x, 'bar');
 	t.is(i, 1);
 });

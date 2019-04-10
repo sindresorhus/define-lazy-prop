@@ -18,7 +18,7 @@ $ npm install define-lazy-prop
 const defineLazyProp = require('define-lazy-prop');
 
 const unicorn = {
-	// ...
+	// …
 };
 
 defineLazyProp(unicorn, 'rainbow', () => expensiveComputation());
