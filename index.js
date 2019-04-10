@@ -1,19 +1,19 @@
 'use strict';
-module.exports = (obj, prop, fn) => {
-	const define = value => Object.defineProperty(obj, prop, {value, enumerable: true, writable: true});
+module.exports = (object, propertyName, fn) => {
+	const define = value => Object.defineProperty(object, propertyName, {value, enumerable: true, writable: true});
 
-	Object.defineProperty(obj, prop, {
+	Object.defineProperty(object, propertyName, {
 		configurable: true,
 		enumerable: true,
 		get() {
-			const ret = fn();
-			define(ret);
-			return ret;
+			const result = fn();
+			define(result);
+			return result;
 		},
-		set(val) {
-			define(val);
+		set(value) {
+			define(value);
 		}
 	});
 
-	return obj;
+	return object;
 };

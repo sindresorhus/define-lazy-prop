@@ -8,7 +8,7 @@ Useful when the value of a property is expensive to generate, so you want to del
 ## Install
 
 ```
-$ npm install --save define-lazy-prop
+$ npm install define-lazy-prop
 ```
 
 
@@ -31,15 +31,15 @@ app.on('user-action', () => {
 
 ## API
 
-### defineLazyProp(obj, prop, fn)
+### defineLazyProp(object, propertyName, fn)
 
-#### obj
+#### object
 
 Type: `Object`
 
 Object to add property to.
 
-#### prop
+#### propertyName
 
 Type: `string`
 
@@ -49,7 +49,7 @@ Name of the property to add.
 
 Type: `Function`
 
-Called the first time `prop` is accessed. Expected to return a value.
+Called the first time `propertyName` is accessed. Expected to return a value.
 
 
 ## Related
