@@ -1,4 +1,4 @@
-# define-lazy-prop [![Build Status](https://travis-ci.org/sindresorhus/define-lazy-prop.svg?branch=master)](https://travis-ci.org/sindresorhus/define-lazy-prop)
+# define-lazy-prop
 
 > Define a [lazily evaluated](https://en.wikipedia.org/wiki/Lazy_evaluation) property on an object
 
