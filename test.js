@@ -1,20 +1,20 @@
 import test from 'ava';
-import defineLazyProp from '.';
+import defineLazyProperty from './index.js';
 
 test('main', t => {
 	const object = {};
-	let i = 0;
+	let index = 0;
 
-	defineLazyProp(object, 'x', () => {
-		i++;
+	defineLazyProperty(object, 'x', () => {
+		index++;
 		return 'foo';
 	});
 
 	t.is(object.x, 'foo');
 	t.is(object.x, 'foo');
-	t.is(i, 1);
+	t.is(index, 1);
 
 	object.x = 'bar';
 	t.is(object.x, 'bar');
-	t.is(i, 1);
+	t.is(index, 1);
 });
