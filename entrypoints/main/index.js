@@ -11,7 +11,7 @@ export default function defineLazyProperty(object, propertyName, valueGetter) {
 		},
 		set(value) {
 			define(value);
-		}
+		},
 	});
 
 	return object;

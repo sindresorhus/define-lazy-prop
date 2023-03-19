@@ -2,7 +2,7 @@ import {expectType, expectError} from 'tsd';
 import defineLazyProperty from './index.js';
 
 const unicorn = {
-	foo: 'bar'
+	foo: 'bar',
 };
 
 const rainbowUnicorn = defineLazyProperty(unicorn, 'rainbow', () => 1);

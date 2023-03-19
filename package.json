@@ -11,7 +11,10 @@
 		"url": "https://sindresorhus.com"
 	},
 	"type": "module",
-	"exports": "./index.js",
+	"exports": {
+		".": "./entrypoints/main/index.js",
+		"./decorator": "./entrypoints/decorator/index.js"
+	},
 	"engines": {
 		"node": ">=12"
 	},
@@ -19,8 +22,7 @@
 		"test": "xo && ava && tsd"
 	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"entrypoints"
 	],
 	"keywords": [
 		"lazy",
@@ -41,11 +43,37 @@
 		"memoize",
 		"cache",
 		"defer",
-		"deferred"
+		"deferred",
+		"decorator"
 	],
 	"devDependencies": {
-		"ava": "^3.15.0",
-		"tsd": "^0.14.0",
-		"xo": "^0.38.2"
+		"@babel/core": "^7.21.3",
+		"@babel/eslint-parser": "^7.21.3",
+		"@babel/plugin-proposal-decorators": "^7.21.0",
+		"ava": "^5.2.0",
+		"babel-register-esm": "^1.2.4",
+		"tsd": "^0.28.0",
+		"xo": "^0.53.1"
+	},
+	"babel": {
+		"plugins": [
+			[
+				"@babel/plugin-proposal-decorators",
+				{
+					"version": "2023-01"
+				}
+			]
+		]
+	},
+	"xo": {
+		"parser": "@babel/eslint-parser"
+	},
+	"ava": {
+		"files": [
+			"entrypoints/**/test.js"
+		],
+		"require": [
+			"babel-register-esm"
+		]
 	}
 }
