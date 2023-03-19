@@ -11,7 +11,9 @@
 		"url": "https://sindresorhus.com"
 	},
 	"type": "module",
-	"exports": "./index.js",
+	"exports": {
+		".": "./entrypoints/main/index.js"
+	},
 	"engines": {
 		"node": ">=12"
 	},
@@ -19,8 +21,7 @@
 		"test": "xo && ava && tsd"
 	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"entrypoints"
 	],
 	"keywords": [
 		"lazy",
@@ -47,5 +48,10 @@
 		"ava": "^5.2.0",
 		"tsd": "^0.28.0",
 		"xo": "^0.53.1"
+	},
+	"ava": {
+		"files": [
+			"entrypoints/**/test.js"
+		]
 	}
 }
