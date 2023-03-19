@@ -23,7 +23,7 @@ app.on('user-action', () => {
 export default function defineLazyProperty<
 	ObjectType extends Record<string, any>,
 	PropertyNameType extends string,
-	PropertyValueType
+	PropertyValueType,
 >(
 	object: ObjectType,
 	propertyName: PropertyNameType,
