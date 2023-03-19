@@ -12,7 +12,8 @@
 	},
 	"type": "module",
 	"exports": {
-		".": "./entrypoints/main/index.js"
+		".": "./entrypoints/main/index.js",
+		"./decorator": "./entrypoints/decorator/index.js"
 	},
 	"engines": {
 		"node": ">=12"
@@ -42,16 +43,37 @@
 		"memoize",
 		"cache",
 		"defer",
-		"deferred"
+		"deferred",
+		"decorator"
 	],
 	"devDependencies": {
+		"@babel/core": "^7.21.3",
+		"@babel/eslint-parser": "^7.21.3",
+		"@babel/plugin-proposal-decorators": "^7.21.0",
 		"ava": "^5.2.0",
+		"babel-register-esm": "^1.2.4",
 		"tsd": "^0.28.0",
 		"xo": "^0.53.1"
+	},
+	"babel": {
+		"plugins": [
+			[
+				"@babel/plugin-proposal-decorators",
+				{
+					"version": "2023-01"
+				}
+			]
+		]
+	},
+	"xo": {
+		"parser": "@babel/eslint-parser"
 	},
 	"ava": {
 		"files": [
 			"entrypoints/**/test.js"
+		],
+		"require": [
+			"babel-register-esm"
 		]
 	}
 }
